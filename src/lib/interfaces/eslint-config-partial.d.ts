@@ -1,4 +1,4 @@
 export interface EslintConfigPartial {
-    plugins: string[],
-    extends: string[],
+  plugins: string[];
+  extends: string[];
 }

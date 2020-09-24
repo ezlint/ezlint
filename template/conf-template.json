@@ -1,12 +1,6 @@
 {
   "name": "NAME",
-  "plugins": [
-    "PLUGIN_NAME"
-  ],
-  "extends": [
-    "RULESET_NAME"
-  ],
-  "optionalExtends": [
-    { "if": "RULESET_NAME", "include": "RULESET_NAME" }
-  ]
+  "plugins": ["PLUGIN_NAME"],
+  "extends": ["RULESET_NAME"],
+  "optionalExtends": [{ "if": "RULESET_NAME", "include": "RULESET_NAME" }]
 }
