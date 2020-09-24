@@ -9,6 +9,7 @@
 </p>
 
 > The easy eslint config generator.
+ezlint is a eslint config generation tool that enables developers to get started using eslint quickly and without effort.
 
 ### 🏠 [Homepage](https://ezlint.github.io/ezlint)
 
