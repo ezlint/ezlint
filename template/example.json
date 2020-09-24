@@ -1,6 +1,5 @@
 {
   "name": "react",
-  "version": "0.1.0",
   "plugins": [
     "react",
     "jsx-a11y"

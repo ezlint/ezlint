@@ -1,6 +1,5 @@
 {
   "name": "NAME",
-  "version": "VERSION:MAJ_MIN_PAT",
   "plugins": [
     "PLUGIN_NAME"
   ],
