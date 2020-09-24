@@ -1,4 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Welcome to ezlint 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/ezlint" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/ezlint.svg">
+  </a>
+  <a href="https://github.com/ezlint/ezlint/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
+
+> The easy eslint config generator.
+ezlint is a eslint config generation tool that enables developers to get started using eslint quickly and without effort.
+
+### 🏠 [Homepage](https://ezlint.github.io/ezlint)
 
 ## Available Scripts
 
@@ -37,8 +50,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 🤝 Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ezlint/ezlint/issues). You can also take a look at the [contributing guide](https://github.com/ezlint/ezlint/blob/master/CONTRIBUTING.md).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+This project is [MIT](https://github.com/ezlint/ezlint/blob/master/LICENSE) licensed.
