@@ -1,6 +1,8 @@
+import { Order } from './order';
+
 export interface IntermediateExtendsEntry {
-    name: '',
-    order: 'early'|'middle'|'late',
+    name: string,
+    order: Order,
 }
 
 export interface IntermediateConfigCollector {

@@ -1,3 +1,5 @@
+import {Order} from "./order";
+
 interface OptionalExport {
     if: string,
     include: string,
@@ -5,7 +7,7 @@ interface OptionalExport {
 
 export interface LibraryConfig {
     name: string,
-    order?: 'early'|'normal'|'late'
+    order?: Order,
     plugins: string[],
     extendsConfigs: string[],
     optionalExtends?: OptionalExport[],
