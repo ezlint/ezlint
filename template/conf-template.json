@@ -10,4 +10,5 @@
   "optionalExtends": [
     { "if": "RULESET_NAME", "include": "RULESET_NAME" }
   ]
+
 }
