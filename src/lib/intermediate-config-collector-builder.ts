@@ -1,11 +1,14 @@
 import { sortBy } from 'lodash';
 import {LibraryConfig} from "./interfaces/library-config";
 import {IntermediateConfigCollector, IntermediateExtendsEntry} from "./interfaces/intermediate-config-collector";
+import {Order} from "./interfaces/order";
+
+const DEFAULT_ORDER: Order = "normal";
 
 const getEntriesForLibConfig = (libConfig: LibraryConfig): IntermediateExtendsEntry[] =>
     libConfig.extendsConfigs.map(config => ({
         name: config,
-        order: libConfig.order||'normal'
+        order: libConfig.order||DEFAULT_ORDER,
     }));
 
 export const createCollectorFromLibConfig = (libConfig: LibraryConfig): IntermediateConfigCollector => {
