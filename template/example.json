@@ -1,14 +1,6 @@
 {
   "name": "react",
-  "plugins": [
-    "react",
-    "jsx-a11y"
-  ],
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
-  "optionalExtends": [
-    { "if": "RULESET_NAME", "include": "RULESET_NAME" }
-  ]
+  "plugins": ["react", "jsx-a11y"],
+  "extends": ["plugin:react/recommended", "plugin:jsx-a11y/recommended"],
+  "optionalExtends": [{ "if": "RULESET_NAME", "include": "RULESET_NAME" }]
 }
