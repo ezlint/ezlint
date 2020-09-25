@@ -1,5 +1,5 @@
 import sortBy from 'lodash/sortBy';
-import uniq from 'lodash/sortBy';
+import uniq from 'lodash/uniq';
 import { IntermediateConfigCollector } from './interfaces/intermediate-config-collector';
 import { EslintConfigPartial } from './interfaces/eslint-config-partial';
 
