@@ -18,7 +18,9 @@
     "react-router": "^5.1.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "@material-ui/icons": "latest",
+    "@material-ui/lab": "latest"
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.5",

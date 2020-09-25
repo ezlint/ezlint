@@ -57,7 +57,7 @@ export const Layout: React.FC<any> = ({ children }) => {
             color="inherit"
             aria-label="icon"
           >
-            <EzLintIcon onClick={navigateHome} viewBox="0 0 35 33"/>
+            <EzLintIcon onClick={navigateHome} viewBox="0 0 35 33" />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             EZLINT

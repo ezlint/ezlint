@@ -7,15 +7,15 @@ export const EzLintIcon = (props: SvgIconProps) => (
     <g
       id="Material-Design-Stickersheet"
       stroke="none"
-      stroke-width="1"
+      strokeWidth="1"
       fill="none"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     >
       <g
         id="Desktop-HD"
         transform="translate(-59.000000, -26.000000)"
         fill="#FFFFFF"
-        fill-rule="nonzero"
+        fillRule="nonzero"
       >
         <g id="Group-3" transform="translate(59.000000, 26.000000)">
           <polygon
