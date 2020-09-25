@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Home from './components/pages/Home';
+import { Layout } from './components/templates/Layout';
+import SearchThingy from './components/organisms/SearchThingy';
 
 function App() {
   const theme = createMuiTheme({});
@@ -13,12 +14,13 @@ function App() {
       <CssBaseline />
       <Router>
         {/* import other stuff here */}
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Layout>
+          <Switch>
+            <Route exact path="/">
+              <SearchThingy />
+            </Route>
+          </Switch>
+        </Layout>
       </Router>
     </ThemeProvider>
   );
