@@ -38,11 +38,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier" : "npx prettier --write ."
+    "prettier" : "npx prettier --write ./src"
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.2%", 
       "not dead",
       "not op_mini all"
     ],
