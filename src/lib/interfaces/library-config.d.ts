@@ -11,4 +11,5 @@ export interface LibraryConfig {
     plugins: string[],
     extendsConfigs: string[],
     optionalExtends?: OptionalExport[],
+    dependencies: string[],
 }

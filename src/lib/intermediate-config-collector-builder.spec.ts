@@ -16,7 +16,8 @@ describe('IntermediateConfigCollector builder', () => {
                     'plugin-B'
                 ],
                 extendsConfigs: [],
-                optionalExtends: []
+                optionalExtends: [],
+                dependencies: [],
             }
 
             const result = createCollectorFromLibConfig(libConfig);
@@ -24,6 +25,28 @@ describe('IntermediateConfigCollector builder', () => {
             expect(result).toHaveProperty('plugins', [
                 'plugin-A',
                 'plugin-B',
+            ]);
+
+        });
+
+        it('creates a collector with a .dependencies entry for each .dependencies entry in the input', async () => {
+
+            const libConfig: LibraryConfig = {
+                name: '',
+                plugins: [],
+                extendsConfigs: [],
+                optionalExtends: [],
+                dependencies: [
+                    'dep-A',
+                    'dep-B'
+                ],
+            }
+
+            const result = createCollectorFromLibConfig(libConfig);
+
+            expect(result).toHaveProperty('dependencies', [
+                'dep-A',
+                'dep-B',
             ]);
 
         });
@@ -38,7 +61,8 @@ describe('IntermediateConfigCollector builder', () => {
                         'config-A',
                         'config-B',
                     ],
-                    optionalExtends: []
+                    optionalExtends: [],
+                    dependencies: [],
                 }
 
                 const result = createCollectorFromLibConfig(libConfig);
@@ -58,6 +82,7 @@ describe('IntermediateConfigCollector builder', () => {
                         'config-B',
                     ],
                     optionalExtends: [],
+                    dependencies: [],
                     // no order specified
                 }
 
@@ -79,6 +104,7 @@ describe('IntermediateConfigCollector builder', () => {
                         'config-B',
                     ],
                     optionalExtends: [],
+                    dependencies: [],
                     order: "normal", // order set to normal
                 }
 
@@ -100,6 +126,7 @@ describe('IntermediateConfigCollector builder', () => {
                         'config-B',
                     ],
                     optionalExtends: [],
+                    dependencies: [],
                     order: "late", // order set to late
                 }
 
@@ -121,6 +148,7 @@ describe('IntermediateConfigCollector builder', () => {
                         'config-B',
                     ],
                     optionalExtends: [],
+                    dependencies: [],
                     order: "early", // order set to early
                 }
 
@@ -139,13 +167,14 @@ describe('IntermediateConfigCollector builder', () => {
 
     describe('addConfigToCollector', () => {
 
-        it('adds the "plugins" from the LibraryConfig into the existing "plugins" set (uniq)', async () => {
+        it('adds the .plugins from the LibraryConfig into the existing .plugins set (uniq)', async () => {
             const collector: IntermediateConfigCollector = {
                 extends: [],
                 plugins: [
                     'plugin-A',
                     'plugin-B',
                 ],
+                dependencies: [],
             };
 
             const libConfig: LibraryConfig = {
@@ -156,12 +185,41 @@ describe('IntermediateConfigCollector builder', () => {
                 ],
                 extendsConfigs: [],
                 optionalExtends: [],
+                dependencies: [],
             };
 
             const result = addConfigToCollector(libConfig, collector);
 
             expect(result).toHaveProperty('plugins', uniq(
                 collector.plugins.concat(libConfig.plugins)
+            ));
+        });
+
+        it('adds the .dependencies from the LibraryConfig into the existing .dependencies set (uniq)', async () => {
+            const collector: IntermediateConfigCollector = {
+                extends: [],
+                plugins: [],
+                dependencies: [
+                    'dep-A',
+                    'dep-B',
+                ],
+            };
+
+            const libConfig: LibraryConfig = {
+                name: '',
+                plugins: [],
+                extendsConfigs: [],
+                optionalExtends: [],
+                dependencies: [
+                    'dep-C',
+                    'dep-D',
+                ],
+            };
+
+            const result = addConfigToCollector(libConfig, collector);
+
+            expect(result).toHaveProperty('dependencies', uniq(
+                collector.dependencies.concat(libConfig.dependencies)
             ));
         });
 
@@ -172,6 +230,7 @@ describe('IntermediateConfigCollector builder', () => {
                     { name: 'config-B', order: "early" },
                 ],
                 plugins: [],
+                dependencies: [],
             };
 
             const libConfig: LibraryConfig = {
@@ -182,6 +241,7 @@ describe('IntermediateConfigCollector builder', () => {
                     'config-D',
                 ],
                 optionalExtends: [],
+                dependencies: [],
             }
 
             const result = addConfigToCollector(libConfig, collector);

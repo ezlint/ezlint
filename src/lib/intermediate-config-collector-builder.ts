@@ -12,13 +12,14 @@ const getEntriesForLibConfig = (libConfig: LibraryConfig): IntermediateExtendsEn
     }));
 
 export const createCollectorFromLibConfig = (libConfig: LibraryConfig): IntermediateConfigCollector => {
-    const { plugins } = libConfig;
+    const { plugins, dependencies } = libConfig;
 
     const entries = getEntriesForLibConfig(libConfig);
 
     return {
         plugins,
         extends: entries,
+        dependencies,
     }
 };
 
@@ -29,6 +30,7 @@ export const addConfigToCollector =
         }
 
         const plugins = sortBy<string>(collector.plugins.concat(libConfig.plugins));
+        const dependencies = sortBy<string>(collector.dependencies.concat(libConfig.dependencies));
 
         const entries = getEntriesForLibConfig(libConfig);
 
@@ -36,5 +38,6 @@ export const addConfigToCollector =
             ...collector,
             plugins,
             extends: [ ...collector.extends, ...entries, ],
+            dependencies,
         };
     };

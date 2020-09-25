@@ -8,4 +8,5 @@ export interface IntermediateExtendsEntry {
 export interface IntermediateConfigCollector {
     plugins: string[],
     extends: IntermediateExtendsEntry[],
+    dependencies: string[],
 }
