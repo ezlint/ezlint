@@ -1,25 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, Grid } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { list as listLibraries } from '../../lib/plugins';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      'width': 500,
-      '& > * + *': {
-        marginTop: theme.spacing(3),
-      },
-    },
-  })
-);
 
 // sample taken from https://material-ui.com/components/autocomplete/#multiple-values
 const SearchThingy = () => {
-  const classes = useStyles();
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const options = listLibraries.map((v) => v.name);
   const history = useHistory();
