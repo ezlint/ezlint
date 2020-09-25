@@ -13,9 +13,6 @@ import { useHistory } from 'react-router';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-    },
     menuButton: {
       marginRight: theme.spacing(2),
     },
@@ -24,17 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     container: {
       width: '100%',
-      display: 'block',
-      boxSizing: 'border-box',
-      marginLeft: 'auto',
-      marginRight: 'auto',
       padding: theme.spacing(2),
-      minHeight: `calc(100% - ${theme.spacing(8)}px)`,
       [theme.breakpoints.up('sm')]: {
         padding: theme.spacing(4),
       },
-      flexGrow: 1,
-      height: '100vh',
       overflow: 'auto',
     },
   })
@@ -48,10 +38,11 @@ export const Layout: React.FC<any> = ({ children }) => {
   }, [history]);
 
   return (
-    <div className={classes.root}>
+    <>
       <AppBar position="static">
         <Toolbar>
-          <IconButton onClick={navigateHome}
+          <IconButton
+            onClick={navigateHome}
             edge="start"
             className={classes.menuButton}
             color="inherit"
@@ -64,7 +55,8 @@ export const Layout: React.FC<any> = ({ children }) => {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <div className={classes.container}>{children}</div>
-    </div>
+    </>
   );
 };
