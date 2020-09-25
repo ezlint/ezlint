@@ -4,10 +4,16 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Layout } from './components/templates/Layout';
-import SearchThingy from './components/organisms/SearchThingy';
+import Home from './components/pages/Home';
 
 function App() {
-  const theme = createMuiTheme({});
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: '#1d1d1b',
+      },
+    },
+  });
 
   return (
     <ThemeProvider theme={theme}>
@@ -17,7 +23,7 @@ function App() {
         <Layout>
           <Switch>
             <Route exact path="/">
-              <SearchThingy />
+              <Home />
             </Route>
           </Switch>
         </Layout>
