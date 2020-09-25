@@ -51,13 +51,13 @@ export const Layout: React.FC<any> = ({ children }) => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
+          <IconButton onClick={navigateHome}
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="icon"
           >
-            <EzLintIcon onClick={navigateHome} viewBox="0 0 35 33" />
+            <EzLintIcon viewBox="0 0 35 33" />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             EZLINT
