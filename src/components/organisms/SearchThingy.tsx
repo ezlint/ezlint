@@ -4,6 +4,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Button, Typography } from '@material-ui/core';
 import { useHistory } from 'react-router';
+import { list as listLibraries } from '../../lib/plugins';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,8 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const SearchThingy = () => {
   const classes = useStyles();
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-  // TODO retrieve from "wherever"
-  const options: string[] = ['jest', 'typescript', 'etc'];
+  const options = listLibraries.map((v) => v.name);
   const history = useHistory();
 
   const create = useCallback(() => {
