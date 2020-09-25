@@ -29,7 +29,7 @@ const SearchThingy = () => {
   }, [history, selectedOptions]);
 
   return (
-    <Grid container item alignItems="center" justify="center" spacing={2}>
+    <Grid container item alignItems="flex-end" justify="center" spacing={2}>
       <Grid item xs={4}>
         <Autocomplete
           multiple
