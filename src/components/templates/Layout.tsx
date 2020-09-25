@@ -51,7 +51,8 @@ export const Layout: React.FC<any> = ({ children }) => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton onClick={navigateHome}
+          <IconButton
+            onClick={navigateHome}
             edge="start"
             className={classes.menuButton}
             color="inherit"

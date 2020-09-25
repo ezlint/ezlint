@@ -5,7 +5,6 @@ import { Button, Grid } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { list as listLibraries } from '../../lib/plugins';
 
-
 // sample taken from https://material-ui.com/components/autocomplete/#multiple-values
 const SearchThingy = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
