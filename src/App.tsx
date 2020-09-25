@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Layout } from './components/templates/Layout';
 import Home from './components/pages/Home';
+import Results from './components/pages/Results';
 
 function App() {
   const theme = createMuiTheme({
@@ -24,6 +25,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/results">
+              <Results />
             </Route>
           </Switch>
         </Layout>
