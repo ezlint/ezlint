@@ -1,4 +1,4 @@
-import { sortBy } from 'lodash';
+import sortBy from 'lodash/sortBy';
 import {LibraryConfig} from "./interfaces/library-config";
 import {IntermediateConfigCollector, IntermediateExtendsEntry} from "./interfaces/intermediate-config-collector";
 import {Order} from "./interfaces/order";

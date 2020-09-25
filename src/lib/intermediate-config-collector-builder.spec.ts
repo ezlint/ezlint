@@ -1,4 +1,4 @@
-import { uniq } from 'lodash';
+import uniq from 'lodash/uniq';
 import { createCollectorFromLibConfig, addConfigToCollector } from './intermediate-config-collector-builder';
 import {LibraryConfig} from "./interfaces/library-config";
 import {IntermediateConfigCollector} from "./interfaces/intermediate-config-collector";
