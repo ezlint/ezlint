@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ezlint/precache-manifest.7ba8ef8cdd07bb0fbb20ef941992fbba.js"
+  "/ezlint/precache-manifest.cefee09845c9a5790833adfad352c074.js"
 );
 
 self.addEventListener('message', (event) => {
