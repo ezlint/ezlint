@@ -1,4 +1,4 @@
-import {Order} from "./order";
+import { Order } from './order';
 
 interface OptionalExport {
   if: string;
@@ -6,10 +6,10 @@ interface OptionalExport {
 }
 
 export interface LibraryConfig {
-    name: string;
-    order?: Order;
-    plugins: string[];
-    extendsConfigs: string[];
-    optionalExtends?: OptionalExport[];
-    dependencies: string[];
+  name: string;
+  order?: Order;
+  plugins: string[];
+  extendsConfigs: string[];
+  optionalExtends?: OptionalExport[];
+  dependencies: string[];
 }

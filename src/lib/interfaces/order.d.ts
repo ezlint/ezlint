@@ -1,1 +1,1 @@
-export type Order = 'early'|'normal'|'late';
+export type Order = 'early' | 'normal' | 'late';
