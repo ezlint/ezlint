@@ -212,5 +212,46 @@ describe('IntermediateConfigCollector builder', () => {
         uniq(inputExtendsEntriesNames.concat(libConfig.extendsConfigs))
       );
     });
+
+    it('adds an entry in collector.extends for each entry in libConfig.optionalExtends', async () => {
+      const collector: IntermediateConfigCollector = {
+        extends: [
+          { name: 'config-A', order: 'normal' },
+          { name: 'config-B', order: 'early' },
+        ],
+        plugins: [],
+        dependencies: [],
+      };
+
+      const libConfig: LibraryConfig = {
+        name: '',
+        plugins: [],
+        extendsConfigs: ['config-C', 'config-D'],
+        optionalExtends: [
+          { if: 'some', include: 'config-E' },
+          { if: 'some', include: 'config-F' },
+        ],
+        dependencies: [],
+      };
+
+      const result = addConfigToCollector(libConfig, collector);
+
+      const inputExtendsEntriesNames = collector.extends.map(
+        (entry) => entry.name
+      );
+      const resultExtendsEntriesNames = result.extends.map(
+        (entry) => entry.name
+      );
+
+      expect(resultExtendsEntriesNames).toEqual(
+        uniq(
+          inputExtendsEntriesNames
+            .concat(libConfig.extendsConfigs)
+            .concat(
+              libConfig.optionalExtends?.map((entry) => entry.include) ?? []
+            )
+        )
+      );
+    });
   });
 });

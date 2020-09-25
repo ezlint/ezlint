@@ -16,7 +16,7 @@ describe('createPartialFromCollector', () => {
 
   it('creates a partial with the all the extends entries from the input, ordered "early", "normal", "late"', async () => {
     const collector: IntermediateConfigCollector = {
-      plugins: [],
+      plugins: ['plugin-A'],
       extends: [
         { name: 'config-A', order: 'normal' },
         { name: 'config-B', order: 'late' },
@@ -24,6 +24,8 @@ describe('createPartialFromCollector', () => {
         { name: 'config-D', order: 'early' },
         { name: 'config-E', order: 'early' },
         { name: 'config-F', order: 'normal' },
+        { name: 'config-G', order: 'early', if: 'plugin-0' },
+        { name: 'config-H', order: 'early', if: 'plugin-A' },
       ],
       dependencies: [],
     };
@@ -33,6 +35,7 @@ describe('createPartialFromCollector', () => {
     expect(result).toHaveProperty('extends', [
       'config-D', // early
       'config-E',
+      'config-H',
       'config-A', //normal
       'config-C',
       'config-F',
