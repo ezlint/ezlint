@@ -25,7 +25,6 @@ const Results = () => {
   const query = new URLSearchParams(search);
   // get the list from the URL
   const requestedPlugins = query.get('selection')?.split(',') as string[];
-  console.log(requestedPlugins);
   // filter and intersect with the supported
   const finalPlugins = supportedPlugins.filter((s) =>
     // lower case match
@@ -64,12 +63,12 @@ const Results = () => {
     <Container maxWidth="lg">
       <Grid container spacing={6} direction="column">
         <Grid item>
-          <Typography variant="h6" align="center">
+          <Typography variant="h5" align="center">
             All what you need to do now is to copy your files
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="subtitle1">Install dependencies</Typography>
+          <Typography variant="h6">Install dependencies</Typography>
         </Grid>
         <Grid container item xs={12} justify="space-between">
           <Grid item xs={10}>
@@ -106,7 +105,7 @@ const Results = () => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="subtitle1">
+          <Typography variant="h6">
             Copy your config file to <code>.eslintrc.js</code>
           </Typography>
         </Grid>
