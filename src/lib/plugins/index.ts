@@ -1,15 +1,21 @@
-import jest from './jest';
-import prettier from './prettier';
-import react from './react';
-import reactHooks from './react-hooks';
-import typescript from './typescript';
+import jestLib from './jest';
+import prettierLib from './prettier';
+import reactLib from './react';
+import reactHooksLib from './react-hooks';
+import typescriptLib from './typescript';
 
-export const list = [jest, prettier, react, reactHooks, typescript];
+export const list = [
+  jestLib,
+  prettierLib,
+  reactLib,
+  reactHooksLib,
+  typescriptLib,
+];
 
 export default {
-  jest,
-  prettier,
-  react,
-  reactHooks,
-  typescript,
+  jest: jestLib,
+  prettier: prettierLib,
+  react: reactLib,
+  reactHooks: reactHooksLib,
+  typescript: typescriptLib,
 };

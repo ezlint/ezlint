@@ -3,7 +3,7 @@ import { LibraryConfig } from '../interfaces/library-config';
 /**
  * https://www.npmjs.com/package/eslint-plugin-react-hooks
  */
-export const reactHooks: LibraryConfig = {
+export const reactHooksLib: LibraryConfig = {
   name: 'React-Hooks',
   order: 'normal',
   plugins: ['react-hooks'],
@@ -11,4 +11,4 @@ export const reactHooks: LibraryConfig = {
   dependencies: ['eslint-plugin-react-hooks'],
 };
 
-export default reactHooks;
+export default reactHooksLib;

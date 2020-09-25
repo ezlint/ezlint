@@ -3,7 +3,7 @@ import { LibraryConfig } from '../interfaces/library-config';
 /**
  * https://www.npmjs.com/package/eslint-plugin-react
  */
-export const react: LibraryConfig = {
+export const reactLib: LibraryConfig = {
   name: 'React',
   order: 'normal',
   plugins: ['react'],
@@ -11,4 +11,4 @@ export const react: LibraryConfig = {
   dependencies: ['eslint-plugin-react'],
 };
 
-export default react;
+export default reactLib;

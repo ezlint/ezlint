@@ -3,7 +3,7 @@ import { LibraryConfig } from '../interfaces/library-config';
 /**
  * https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
  */
-export const typescript: LibraryConfig = {
+export const typescriptLib: LibraryConfig = {
   name: 'Typescript',
   order: 'normal',
   plugins: ['@typescript-eslint'],
@@ -15,4 +15,4 @@ export const typescript: LibraryConfig = {
   ],
 };
 
-export default typescript;
+export default typescriptLib;
