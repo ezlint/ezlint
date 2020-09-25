@@ -14,7 +14,7 @@ export const EzLintIcon = (props: SvgIconProps) => (
       <g
         id="Desktop-HD"
         transform="translate(-59.000000, -26.000000)"
-        fill="#FFFFFF"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <g id="Group-3" transform="translate(59.000000, 26.000000)">
