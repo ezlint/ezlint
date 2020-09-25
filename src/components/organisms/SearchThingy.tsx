@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Button, Typography } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { list as listLibraries } from '../../lib/plugins';
 
@@ -29,33 +29,35 @@ const SearchThingy = () => {
   }, [history, selectedOptions]);
 
   return (
-    <div className={classes.root}>
-      <Typography variant="h6">
-        Create ESLint configuration for your project
-      </Typography>
-      <Autocomplete
-        multiple
-        id="tags-standard"
-        options={options}
-        getOptionLabel={(option) => option}
-        onChange={(e, values) => setSelectedOptions(values)}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            variant="standard"
-            label="Framework/library/plugin/..."
-          />
-        )}
-      />
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={create}
-        disabled={selectedOptions.length === 0}
-      >
-        Create
-      </Button>
-    </div>
+    <Grid container item alignItems="center" justify="center" spacing={2}>
+      <Grid item xs={4}>
+        <Autocomplete
+          multiple
+          id="tags-standard"
+          options={options}
+          getOptionLabel={(option) => option}
+          onChange={(e, values) => setSelectedOptions(values)}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              variant="standard"
+              label="Framework/library/plugin/..."
+            />
+          )}
+        />
+      </Grid>
+      <Grid item xs={1}>
+        <Button
+          fullWidth
+          variant="contained"
+          color="primary"
+          onClick={create}
+          disabled={selectedOptions.length === 0}
+        >
+          Create
+        </Button>
+      </Grid>
+    </Grid>
   );
 };
 
