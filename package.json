@@ -32,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "2.x",
+    "husky": "^4.3.0",
     "prettier": "^2.1.2"
   },
   "scripts": {
@@ -39,11 +40,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier" : "npx prettier --write ./src"
+    "lint": "yarn eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "pretty": "npx prettier --write ./src"
   },
   "browserslist": {
     "production": [
-      ">0.2%", 
+      ">0.2%",
       "not dead",
       "not op_mini all"
     ],
@@ -52,5 +54,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint && yarn run pretty"
+    }
   }
 }
