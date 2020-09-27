@@ -5,7 +5,6 @@ import { Button, Grid } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { list as listLibraries } from '../../lib/plugins';
 
-
 // sample taken from https://material-ui.com/components/autocomplete/#multiple-values
 const SearchThingy = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
@@ -18,7 +17,7 @@ const SearchThingy = () => {
 
   return (
     <Grid container item alignItems="flex-end" justify="center" spacing={2}>
-      <Grid item xs={4}>
+      <Grid item xs={7}>
         <Autocomplete
           multiple
           id="tags-standard"
@@ -34,7 +33,7 @@ const SearchThingy = () => {
           )}
         />
       </Grid>
-      <Grid item xs={1}>
+      <Grid item>
         <Button
           fullWidth
           variant="contained"
