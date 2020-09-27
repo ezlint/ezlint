@@ -1,8 +1,5 @@
 <h1 align="center">Welcome to ezlint 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/ezlint" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/ezlint.svg" />
-  </a>
   <a href="https://app.circleci.com/pipelines/github/ezlint/ezlint" target="_blank">
     <img alt="CircleCI" src="https://img.shields.io/circleci/build/github/ezlint/ezlint" />
   </a>
