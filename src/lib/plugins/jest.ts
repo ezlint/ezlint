@@ -3,7 +3,7 @@ import { LibraryConfig } from '../interfaces/library-config';
 /**
  * https://www.npmjs.com/package/eslint-plugin-jest
  */
-export const jest: LibraryConfig = {
+export const jestLib: LibraryConfig = {
   name: 'Jest',
   order: 'normal',
   plugins: ['jest'],
@@ -11,4 +11,4 @@ export const jest: LibraryConfig = {
   dependencies: ['eslint-plugin-jest'],
 };
 
-export default jest;
+export default jestLib;

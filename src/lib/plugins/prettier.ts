@@ -3,7 +3,7 @@ import { LibraryConfig } from '../interfaces/library-config';
 /**
  * https://www.npmjs.com/package/eslint-config-prettier
  */
-export const prettier: LibraryConfig = {
+export const prettierLib: LibraryConfig = {
   name: 'Prettier',
   order: 'late',
   plugins: [],
@@ -17,4 +17,4 @@ export const prettier: LibraryConfig = {
   dependencies: ['eslint-config-prettier'],
 };
 
-export default prettier;
+export default prettierLib;
