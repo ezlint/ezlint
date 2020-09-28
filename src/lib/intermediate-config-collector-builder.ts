@@ -11,10 +11,18 @@ const DEFAULT_ORDER: Order = 'normal';
 const getEntriesForLibConfig = (
   libConfig: LibraryConfig
 ): IntermediateExtendsEntry[] =>
-  libConfig.extendsConfigs.map((config) => ({
-    name: config,
-    order: libConfig.order || DEFAULT_ORDER,
-  }));
+  libConfig.extendsConfigs
+    .map((config) => ({
+      name: config,
+      order: libConfig.order || DEFAULT_ORDER,
+    }))
+    .concat(
+      libConfig.optionalExtends?.map((config) => ({
+        name: config.include,
+        order: libConfig.order || DEFAULT_ORDER,
+        if: config.if,
+      })) ?? []
+    );
 
 export const createCollectorFromLibConfig = (
   libConfig: LibraryConfig
