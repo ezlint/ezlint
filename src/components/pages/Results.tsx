@@ -5,7 +5,7 @@ import { useLocation } from 'react-router';
 import { list as supportedPlugins } from '../../lib/plugins';
 import { addConfigToCollector } from '../../lib/intermediate-config-collector-builder';
 import { IntermediateConfigCollector } from '../../lib/interfaces/intermediate-config-collector';
-import CommandDisplay from '../organisms/CommandDisplay';
+import CommandDisplay from '../molecules/CommandDisplay';
 import ConfigDisplay from '../molecules/ConfigDisplay';
 
 const Results = () => {
