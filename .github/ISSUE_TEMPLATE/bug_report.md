@@ -21,9 +21,5 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**System info**
- - OS and version: [e.g. macOS Catalina (0.15.4)]
- - Browser and version: [e.g. Firefox 80.0.1 (64-bit)]
-
 **Additional context**
 Add any other context about the problem here.
