@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { Layout } from './components/templates/Layout';
 import Home from './components/pages/Home';
 import Results from './components/pages/Results';
+import { Redirect } from 'react-router';
 
 function App() {
   const theme = createMuiTheme({
@@ -23,6 +24,9 @@ function App() {
         {/* import other stuff here */}
         <Layout>
           <Switch>
+            <Route exact path="/ezlint">
+              <Redirect to="/" />
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>
