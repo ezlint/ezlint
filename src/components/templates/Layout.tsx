@@ -6,10 +6,12 @@ import {
   Theme,
   Toolbar,
   Typography,
+  Tooltip,
 } from '@material-ui/core';
 import { EzLintIcon } from '../atoms/ezlint-icon';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router';
+import { GithubButton } from '../atoms/github-icon';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -36,6 +38,9 @@ export const Layout: React.FC<any> = ({ children }) => {
   const navigateHome = useCallback(() => {
     history.push('/');
   }, [history]);
+  const navigateContribute = () => {
+    window.open('https://github.com/ezlint/ezlint');
+  };
 
   return (
     <>
@@ -53,6 +58,17 @@ export const Layout: React.FC<any> = ({ children }) => {
           <Typography variant="h6" className={classes.title}>
             EZLINT
           </Typography>
+          <Tooltip title="Contribute on GitHub">
+            <IconButton
+              onClick={navigateContribute}
+              edge="end"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="icon"
+            >
+              <GithubButton viewBox="0 0 256 250" />
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
 
