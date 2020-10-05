@@ -19,7 +19,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      <Router basename={process.env.REACT_APP_ROUTER_BASENAME}>
         {/* import other stuff here */}
         <Layout>
           <Switch>
